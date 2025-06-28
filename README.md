@@ -33,16 +33,16 @@
 - **Google Drive + gdown** for model storage
 - **Pickle** for dataframe
 
----
 ## 📸 Screenshots
 
-| ![Select Movie](screenshots/select_movies.PNG) |
+| ![Select Movie](screenshots/select_movies.png) |
 |:--:|
-| *Select a movie from the dropdown* |
+| *Selecting a movie from dropdown* |
 
-| ![Recommendations](screenshots/recommendations.PNG) |
+| ![Recommendations](screenshots/recommendation.png) |
 |:--:|
-| *Recommended movies with posters* |
+| *Recommended movies with posters from OMDb API* |
+
 
 
 ## 🚀 Quick Start
@@ -60,31 +60,30 @@ cd watch-buddyfinal
 
 ## ⚙️ Project Structure
 
-watch-buddy/
-│
-├── app.py
-├── requirements.txt
-├── movie_dict.pkl
-├── similarity_compressed.pklz
-├── .gitignore
-└── README.md
+- watch-buddy/
+- │
+- ├── app.py
+- ├── requirements.txt
+- ├── movie_dict.pkl
+- ├── similarity_compressed.pklz
+- ├── .gitignore
+- └── README.md
 
 
-💡 How it works
-Loads your selected movie from the dropdown.
+## 💡 How it works
+- Loads your selected movie from the dropdown.
+- Looks up cosine similarity scores from a precomputed matrix.
+- Picks top 5 most similar movies.
+- Fetches posters via OMDb API. If unavailable, shows placeholder with movie title.
+- Displays them beautifully in Streamlit columns.
 
-Looks up cosine similarity scores from a precomputed matrix.
+---
 
-Picks top 5 most similar movies.
+## 📝 Future Improvements
+- ✅ Filter by genres or year
+- ✅ Show IMDB ratings or popularity
+- ✅ Add collaborative filtering (user-based) recommendations
 
-Fetches posters via OMDb API. If unavailable, shows placeholder with movie title.
-
-Displays them beautifully in Streamlit columns.
-
-📝 Future Improvements
-✅ Filter by genres or year
-✅ Show IMDB ratings or popularity
-✅ Add collaborative filtering (user-based) recommendations
 
 ## ✍️ Author
 - **Vivek Shaw**
